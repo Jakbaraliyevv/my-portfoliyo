@@ -1,5 +1,13 @@
+import Navbar from "../../components/navbar";
+import Showcase from "../../components/showcase";
+
 function Home() {
-  return <div className="">Home</div>;
+  return (
+    <div>
+      <Navbar />
+      <Showcase />
+    </div>
+  );
 }
 
 export default Home;
