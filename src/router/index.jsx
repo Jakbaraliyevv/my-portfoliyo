@@ -1,15 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login from "../components/login";
-import StudentTable from "../components/information";
+import Home from "../pages/home";
 
 const root = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
-  },
-  {
-    path: "/information",
-    element: <StudentTable />,
+    element: <Home />,
   },
 ]);
 
