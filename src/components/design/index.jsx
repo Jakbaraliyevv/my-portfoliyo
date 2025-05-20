@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Laptop, BookOpen, Star } from "lucide-react";
-import myImage from "../../assets/my-img.jpg"; // Make sure this path is correct
+import myImage from "../../assets/my-img.jpg";
 
 export default function PortfolioHeader() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,7 +65,7 @@ export default function PortfolioHeader() {
             <span className="font-medium">I am </span>
             <span className="text-purple-600 ml-1 font-bold">Aziz</span>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45"></div>
-          </div>    
+          </div>
         </div>
 
         <div className="w-[80%] text-center md:text-left z-10">
