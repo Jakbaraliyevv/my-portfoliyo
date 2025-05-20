@@ -1,27 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Laptop, BookOpen, Star } from "lucide-react";
 import myImage from "../../assets/my-img.jpg";
 
 export default function PortfolioHeader() {
   const [isVisible, setIsVisible] = useState(false);
   const [typing, setTyping] = useState("");
-  const textToType = "Azziz Jakbaraliyev";
+  const textToType = "Aziz Jakbaraliyev";
   const purpleText = "Front-End Developer  ";
   const endText = "...";
+  const typingRef = useRef("");
 
   useEffect(() => {
     setIsVisible(true);
     let i = 0;
+    typingRef.current = "";
+
     const typeInterval = setInterval(() => {
       if (i < textToType.length) {
-        setTyping((prev) => prev + textToType.charAt(i));
-        i++;
+        typingRef.current += textToType.charAt(i);
+        setTyping(typingRef.current);
         console.log(
           "Current text:",
-          typing,
+          typingRef.current,
           "Adding:",
-          textToType.charAt(i - 1)
+          textToType.charAt(i)
         );
+        i++;
       } else {
         clearInterval(typeInterval);
       }
@@ -69,7 +73,7 @@ export default function PortfolioHeader() {
         </div>
 
         <div className="w-[80%] text-center md:text-left z-10">
-          <h1 className="text-5xl md:text-[75px] font-bold text-white mb-4 tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-[77px] font-bold text-white mb-4 tracking-tight leading-tight">
             {typing}
             <span className="text-purple-700"> {purpleText}</span>
             <span className="text-white">{endText}</span>
