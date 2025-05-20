@@ -46,9 +46,13 @@ export default function EnhancedSkillsOrbit() {
       name: "Next.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     },
+    // {
+    //   name: "React",
+    //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    // },
     {
-      name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      name: "Vercel",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
     },
   ];
 
@@ -225,7 +229,6 @@ export default function EnhancedSkillsOrbit() {
             />
           ))}
 
-          {/* Particles along rings */}
           {[...Array(24)].map((_, i) => (
             <div
               key={`particle-${i}`}
@@ -242,10 +245,8 @@ export default function EnhancedSkillsOrbit() {
           ))}
         </div>
 
-        {/* Center profile area - moved to left side */}
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 z-20">
           <div className="relative flex items-center justify-center">
-            {/* Glowing background layers */}
             <div
               className="absolute w-64 h-64 rounded-full bg-purple-800 opacity-20"
               style={{
@@ -269,8 +270,7 @@ export default function EnhancedSkillsOrbit() {
               }}
             />
 
-            {/* Central profile image */}
-            <div
+            {/* <div
               className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-900 to-fuchsia-800 flex items-center justify-center z-10"
               style={{
                 boxShadow:
@@ -291,11 +291,39 @@ export default function EnhancedSkillsOrbit() {
                   boxShadow: "inset 0 0 15px rgba(255, 255, 255, 0.3)",
                 }}
               >
-                <img src={logo} alt="Profile" className="w-[60%] " />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Profile" className="w-[60%] " />
+              </span>
+            </div> */}
+
+            <div
+              className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-900 to-fuchsia-800 flex items-center justify-center z-10"
+              style={{
+                boxShadow:
+                  "0 0 40px 12px rgba(159, 122, 234, 0.7), inset 0 0 25px rgba(255, 255, 255, 0.2)",
+                animation: "glow 3s infinite ease-in-out",
+                transform: isHovering
+                  ? `translate(${mousePosition.x * 5}px, ${
+                      mousePosition.y * 5
+                    }px)`
+                  : "none",
+                transition: "transform 0.3s ease-out",
+              }}
+            >
+              <span
+                className="w-32 h-32 overflow-hidden rounded-full flex items-center justify-center"
+                style={{
+                  border: "3px solid rgba(255, 255, 255, 0.2)",
+                  boxShadow: "inset 0 0 15px rgba(255, 255, 255, 0.3)",
+                  animation: "spin 6s linear infinite", // Aylanish animatsiyasi
+                }}
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="Profile"
+                  className="w-[60%]"
+                />
               </span>
             </div>
-
-            {/* Glowing rays */}
             <div className="absolute w-full h-full">
               {[...Array(36)].map((_, i) => (
                 <div

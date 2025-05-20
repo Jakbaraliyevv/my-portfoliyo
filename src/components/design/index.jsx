@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Laptop, BookOpen, Star } from "lucide-react";
 import myImage from "../../assets/my-img.jpg";
-
+import { GithubOutlined } from "@ant-design/icons";
+import { BsTelegram } from "react-icons/bs";
 export default function PortfolioHeader() {
   const [isVisible, setIsVisible] = useState(false);
   const [typing, setTyping] = useState("");
@@ -81,12 +82,16 @@ export default function PortfolioHeader() {
 
           <div className="mt-8 flex gap-6 justify-center md:justify-start">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg flex items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-purple-500/50">
-              <BookOpen size={20} />
+              <GithubOutlined className="text-[30px]" />
               <span className="font-semibold text-lg">GitHub</span>
             </button>
             <button className="bg-transparent border-2 border-purple-500 text-purple-300 hover:text-white px-8 py-3 rounded-lg flex items-center gap-3 transition-all transform hover:scale-105 hover:bg-purple-900/30">
-              <Star size={20} />
-              <span className="font-semibold text-lg">Telegram</span>
+              <BsTelegram size={30} />
+
+              <span className="font-semibold text-lg">
+                <span></span>
+                Telegram
+              </span>
             </button>
           </div>
         </div>
