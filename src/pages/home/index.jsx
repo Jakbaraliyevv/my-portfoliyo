@@ -10,7 +10,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      {/* <Showcase /> */}
+      <Showcase />
 
       <Element name="about">
         <AboutComponents />
