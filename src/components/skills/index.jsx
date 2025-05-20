@@ -765,7 +765,7 @@ export default function EnhancedSkillsOrbit() {
           } font-bold text-center`}
         >
           <span className="inline-block relative">
-            <span className="relative z-10">Skills & Expertise</span>
+            <span className="relative z-10">Ko'nikmalar</span>
             <span
               className="absolute -inset-1 blur-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-600 opacity-70"
               style={{ animation: "pulse 3s infinite" }}

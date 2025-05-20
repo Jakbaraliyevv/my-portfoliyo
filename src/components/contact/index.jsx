@@ -15,7 +15,7 @@ const ContactSection = () => {
         <div className="relative mb-16 z-10">
           <h1 className="text-5xl font-bold text-center text-[#FFF]">
             <span className="inline-block relative">
-              <span className="relative z-10"> Contact Me</span>
+              <span className="relative z-10">Bog'lanish</span>
               <span
                 className="absolute -inset-1 blur-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-600 opacity-70"
                 style={{ animation: "pulse 3s infinite" }}
@@ -94,7 +94,7 @@ const ContactSection = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/jakbaraliyevv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
@@ -104,7 +104,7 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/aziz-jakbaraliyev-47a7a0310/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
@@ -114,7 +114,7 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="https://instagram.com/yourusername"
+                href="https://instagram.com/_1.jakbaraliyev_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"

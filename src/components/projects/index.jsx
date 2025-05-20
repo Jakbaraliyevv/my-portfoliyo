@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
       id: 6,
       title: "MyRobo",
       description:
-        "A modern portfolio website showcasing my projects and skills as a web developer. Features responsive design, dark mode, and interactive project displays.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://myrobo-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/MyRobo",
       tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
       id: 1,
       title: "Robotics",
       description:
-        "A modern portfolio website showcasing my projects and skills as a web developer. Features responsive design, dark mode, and interactive project displays.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://test-project-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/test_project",
       tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
@@ -35,7 +35,7 @@ const FeaturedProjects = () => {
       id: 2,
       title: "Raqamli avlod register",
       description:
-        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://register-page-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/register_page",
       tech: ["React + Vite", "Tailwind CSS", "Antd", "JavaScript"],
@@ -46,7 +46,7 @@ const FeaturedProjects = () => {
       id: 3,
       title: "Quiz",
       description:
-        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://my-first-project-quiz-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/MyFirstProject__Quiz",
       tech: ["React + Vite ", "Tailwind CSS", "Antd", "JavaScript"],
@@ -58,7 +58,7 @@ const FeaturedProjects = () => {
       id: 4,
       title: "Oner.Ru",
       description:
-        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/oner__Ru",
       tech: ["React + vite", "Sass", "Antd", "JavaScript"],
@@ -69,7 +69,7 @@ const FeaturedProjects = () => {
       id: 5,
       title: "Library",
       description:
-        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
       link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
       github: "https://github.com/Jakbaraliyevv/oner__Ru",
       tech: ["React + vite", "Sass", "Antd", "JavaScript"],
@@ -84,7 +84,7 @@ const FeaturedProjects = () => {
         <div className="relative mb-16 z-10">
           <h1 className="text-5xl font-bold text-center text-[#FFF]">
             <span className="inline-block relative">
-              <span className="relative z-10">Projects</span>
+              <span className="relative z-10">Loyihalar</span>
               <span
                 className="absolute -inset-1 blur-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-600 opacity-70"
                 style={{ animation: "pulse 3s infinite" }}
@@ -102,7 +102,6 @@ const FeaturedProjects = () => {
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-8 items-center`}
             >
-              {/* Project Image */}
               <div className="w-full md:w-1/2 relative group">
                 <a
                   href={project.link}
@@ -121,7 +120,6 @@ const FeaturedProjects = () => {
                 </a>
               </div>
 
-              {/* Project Content */}
               <div className="w-full md:w-1/2">
                 <div className={`${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
                   {project.featured && (
