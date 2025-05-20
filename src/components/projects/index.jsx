@@ -1,34 +1,79 @@
 import { useState } from "react";
-import {
-  GithubOutlined,
-  LinkOutlined,
-  ArrowRightOutlined,
-} from "@ant-design/icons";
-import portImage from "../../assets/portfolyo.png";
-import ecommerceImage from "../../assets/portfolyo.png"; // Bu faylni qo'shing yoki boshqa rasm ishlating
-
+import { GithubOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import robotks from "../../assets/robotics.png";
+import regster from "../../assets/regster.png";
+import quiz from "../../assets/quiz.png";
+import onerRu from "../../assets/oner_ru.png";
+import library from "../../assets/library.png";
+import myRobo from "../../assets/myRobo.png";
 const FeaturedProjects = () => {
   const [projects] = useState([
     {
-      id: 1,
-      title: "My Portfolio",
+      id: 6,
+      title: "MyRobo",
       description:
         "A modern portfolio website showcasing my projects and skills as a web developer. Features responsive design, dark mode, and interactive project displays.",
-      link: "https://portfoliyo-git-master-azizbros-projects.vercel.app/",
-      github: "https://github.com/Jakbaraliyevv/my-portfoliyo",
-      tech: ["React", "Tailwind CSS", "Ant Design", "Vite"],
-      imageUrl: portImage,
+      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/MyRobo",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
+      imageUrl: myRobo,
       featured: true,
     },
     {
+      id: 1,
+      title: "Robotics",
+      description:
+        "A modern portfolio website showcasing my projects and skills as a web developer. Features responsive design, dark mode, and interactive project displays.",
+      link: "https://test-project-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/test_project",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
+      imageUrl: robotks,
+      featured: true,
+    },
+
+    {
       id: 2,
-      title: "E-commerce Platform",
+      title: "Raqamli avlod register",
       description:
         "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
-      link: "https://portfoliyo-git-master-azizbros-projects.vercel.app/",
-      github: "https://github.com/Jakbaraliyevv/my-portfoliyo",
-      tech: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-      imageUrl: ecommerceImage,
+      link: "https://register-page-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/register_page",
+      tech: ["React + Vite", "Tailwind CSS", "Antd", "JavaScript"],
+      imageUrl: regster,
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "Quiz",
+      description:
+        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+      link: "https://my-first-project-quiz-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/MyFirstProject__Quiz",
+      tech: ["React + Vite ", "Tailwind CSS", "Antd", "JavaScript"],
+      imageUrl: quiz,
+      featured: true,
+    },
+
+    {
+      id: 4,
+      title: "Oner.Ru",
+      description:
+        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+      link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/oner__Ru",
+      tech: ["React + vite", "Sass", "Antd", "JavaScript"],
+      imageUrl: onerRu,
+      featured: true,
+    },
+    {
+      id: 5,
+      title: "Library",
+      description:
+        "A fully responsive e-commerce platform with product filtering, cart functionality, user authentication, and payment processing. Features an admin dashboard for product management.",
+      link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/oner__Ru",
+      tech: ["React + vite", "Sass", "Antd", "JavaScript"],
+      imageUrl: library,
       featured: true,
     },
   ]);
@@ -113,7 +158,7 @@ const FeaturedProjects = () => {
 
                   <div className="flex items-center space-x-4">
                     <a
-                      href={project.github}
+                      href={project?.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition-colors"
@@ -129,7 +174,6 @@ const FeaturedProjects = () => {
                       className="text-gray-400 hover:text-white transition-colors flex items-center"
                       aria-label="Live demo"
                     >
-                      <LinkOutlined className="text-lg mr-2" />
                       <span>View Project</span>
                       <ArrowRightOutlined className="text-xs ml-1" />
                     </a>
