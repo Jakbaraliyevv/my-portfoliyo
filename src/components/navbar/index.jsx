@@ -3,72 +3,78 @@ import logo from "../../assets/my_logo2.png";
 import { useState } from "react";
 
 function Navbar() {
-  const [language, setLenguage] = useState(false);
+  const [language, setLanguage] = useState(false);
 
   return (
     <section className="bg-[#1a0b2e] shadow-[0_6px_22px_-3px_rgba(0,0,0,0.1)] top-0 sticky z-50">
       <div className="w-[90%] py-5 m-auto flex items-center justify-between">
         <div
-          className="w-[120px] cursor-pointer"
+          className="w-[120px] cursor-pointer hover:opacity-80 transition-opacity"
           onClick={() => scroll.scrollToTop({ duration: 800 })}
         >
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" className="w-full h-auto" />
         </div>
 
         <div className="text-[#FFF] text-[19px] font-bold flex items-center gap-[40px]">
           <ScrollLink
-            className="cursor-pointer"
+            className="cursor-pointer relative group"
             to="about"
             smooth={true}
             duration={800}
             offset={-70}
           >
             About
+            <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer"
+            className="cursor-pointer relative group"
             to="skills"
             smooth={true}
             duration={800}
             offset={-70}
           >
             Skills
+            <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer"
+            className="cursor-pointer relative group"
             to="projects"
             smooth={true}
             duration={800}
             offset={-70}
           >
             Projects
+            <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer"
+            className="cursor-pointer relative group"
             to="contact"
             smooth={true}
             duration={800}
             offset={-70}
           >
             Contact
+            <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
           </ScrollLink>
         </div>
 
         <div className="flex items-center gap-5">
           <button
+            onClick={() => setLanguage(false)}
             className={
               language
-                ? "text-[19px] w-[60px] h-[30px] font-medium rounded-md text-[#FFF] bg-[#561e8f] flex items-center justify-center"
-                : "text-[#FFF] text-[19px] font-medium"
+                ? "text-[19px] w-[60px] h-[30px] font-medium rounded-md text-[#FFF] bg-[#561e8f] flex items-center justify-center transition-colors"
+                : "text-[#FFF] text-[19px] font-medium transition-colors"
             }
           >
             En
           </button>
           <button
+            onClick={() => setLanguage(true)}
             className={
               language
-                ? "text-[#FFF] text-[19px] font-medium"
-                : "text-[19px] w-[60px] h-[30px] font-medium rounded-md text-[#FFF] bg-[#561e8f] flex items-center justify-center"
+                ? "text-[#FFF] text-[19px] font-medium transition-colors"
+                : "text-[19px] w-[60px] h-[30px] font-medium rounded-md text-[#FFF] bg-[#561e8f] flex items-center justify-center transition-colors"
             }
           >
             Uz
