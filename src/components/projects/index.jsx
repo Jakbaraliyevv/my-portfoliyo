@@ -13,7 +13,7 @@ const FeaturedProjects = ({ til }) => {
       title: "MyRobo",
       description:
         "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
-      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      link: "https://myrobo.uz/",
       github: "https://github.com/Jakbaraliyevv/MyRobo",
       tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
       imageUrl: myRobo,
@@ -84,7 +84,7 @@ const FeaturedProjects = ({ til }) => {
       title: "MyRobo",
       description:
         "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
-      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      link: "https://myrobo.uz/",
       github: "https://github.com/Jakbaraliyevv/MyRobo",
       tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
       imageUrl: myRobo,
