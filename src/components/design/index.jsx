@@ -56,7 +56,7 @@ export default function PortfolioHeader() {
         }`}
       >
         <div className="relative mb-8 md:mb-0 mt-12 sm:mt-0">
-          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-96 lg:h-96 bg-gradient-to-b from-gray-700 to-gray-900 rounded-full overflow-hidden flex items-end justify-center border-2 border-purple-500 shadow-lg shadow-purple-500/30">
+          <div className="w-56 h-56 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-96 lg:h-96 bg-gradient-to-b from-gray-700 to-gray-900 rounded-full overflow-hidden flex items-end justify-center border-2 border-purple-500 shadow-lg shadow-purple-500/30">
             <div className="w-full h-full">
               <img
                 src={myImage}
@@ -89,7 +89,7 @@ export default function PortfolioHeader() {
           </div>
 
           <div
-            className={`absolute -top-8 sm:-top-10 lg:-top-12 left-1/2 transform -translate-x-1/2 bg-white px-3 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4 rounded-lg text-xs sm:text-base lg:text-lg flex items-center shadow-xl z-20 ${
+            className={`absolute -top-8 sm:-top-10 lg:-top-12 left-1/2 transform -translate-x-1/2 bg-white px-3 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4 rounded-lg text-xs sm:text-base lg:text-lg flex items-center shadow-xl z-20 max-[768px]:hidden ${
               windowWidth <= 320 ? "text-xs" : ""
             }`}
           >
