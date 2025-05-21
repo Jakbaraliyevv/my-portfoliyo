@@ -129,7 +129,7 @@ const ContactSection = ({ til }) => {
               </a>
 
               <a
-                href="https://t.me/Jakbaraliyev29"
+                href="https://t.me/azizTeach29"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
