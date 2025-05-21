@@ -4,7 +4,7 @@ import {
   InstagramOutlined,
 } from "@ant-design/icons";
 import { BsTelegram } from "react-icons/bs";
-const ContactSection = () => {
+const ContactSection = ({ til }) => {
   return (
     <section
       id="contact"
@@ -14,7 +14,9 @@ const ContactSection = () => {
         <div className="relative mb-16 z-10">
           <h1 className="text-5xl font-bold text-center text-[#FFF]">
             <span className="inline-block relative">
-              <span className="relative z-10">Bog'lanish</span>
+              <span className="relative z-10">
+                {til === "en" ? "Contact" : "Bog'lanish"}
+              </span>
               <span
                 className="absolute -inset-1 blur-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-600 opacity-70"
                 style={{ animation: "pulse 3s infinite" }}
@@ -28,12 +30,13 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="bg-gray-800/50 p-8 rounded-xl">
             <h3 className="text-xl font-semibold text-white mb-4">
-              Get In Touch
+              {/* Get In Touch */}
+              {til === "en" ? "Connect with Me" : "Bog‘lanish uchun"}
             </h3>
             <p className="text-gray-300 mb-6">
-              I'm interested in freelance opportunities and collaboration. Feel
-              free to reach out if you have any questions or just want to
-              connect.
+              {til === "en"
+                ? "I’m open to freelance opportunities and collaborations. If you have any questions or would like to work together on a project, feel free to get in touch. I'm always happy to connect and communicate with new people."
+                : " Frilanserlik va hamkorlik imkoniyatlariga ochiqman. Agar sizda savollar bo‘lsa yoki biror loyiha yuzasidan hamkorlik qilishni istasangiz, bemalol bog‘laning. Muloqot va yangi tanishuvlardan doimo mamnunman."}
             </p>
 
             <div className="space-y-4">
@@ -85,10 +88,13 @@ const ContactSection = () => {
 
           {/* Social Links */}
           <div className="bg-gray-800/50 p-8 rounded-xl">
-            <h3 className="text-xl font-semibold text-white mb-4">Follow Me</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">
+              {til === "en" ? "Follow Me" : "Obuna bo'ling"}
+            </h3>
             <p className="text-gray-300 mb-6">
-              Connect with me on social media to stay updated with my latest
-              projects and posts.
+              {til === "en"
+                ? " Connect with me on social media to stay updated with my latest projects and posts."
+                : "So‘nggi loyihalarim va postlarimdan xabardor bo‘lib turish uchun ijtimoiy tarmoqlarga bog‘laning."}
             </p>
 
             <div className="grid grid-cols-2 gap-4">
@@ -135,10 +141,14 @@ const ContactSection = () => {
           </div>
 
           <div className="bg-gray-800/50 p-8 rounded-xl flex flex-col mb-5">
-            <h3 className="text-xl font-semibold text-white mb-4">My Resume</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">
+              {til === "en" ? "My Resume" : "Rezyumem"}
+            </h3>
+
             <p className="text-gray-300 mb-6 flex-grow">
-              Download my resume to learn more about my professional experience,
-              skills, and education.
+              {til === "en"
+                ? " Download my resume to learn more about my professional experience, skills, and education."
+                : " Mening ish tajribam, ko‘nikmalarim va ta’limim haqida batafsil ma’lumot olish uchun rezyumemni yuklab oling."}
             </p>
 
             <a
@@ -147,14 +157,16 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
-              See Resume
+              {til === "en" ? "See Resume" : "Ko‘rish"}
             </a>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center max-[768px]:hidden">
-          <p className="text-gray-400 ">
-            © {new Date().getFullYear()} All Rights Reserved
+          <p className="text-gray-400">
+            {til === "en"
+              ? `© ${new Date().getFullYear()} All Rights Reserved`
+              : `© ${new Date().getFullYear()} Barcha huquqlar himoyalangan`}
           </p>
         </div>
       </div>

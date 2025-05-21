@@ -1,91 +1,8 @@
-
-
-// import React, { useEffect, useRef, useState } from "react";
-// import * as THREE from "three";
-// import PortfolioHeader from "../design";
-
-// function Showcase() {
-//   const [vantaEffect, setVantaEffect] = useState(null);
-//   const myRef = useRef(null);
-//   const [isMobile, setIsMobile] = useState(false);
-
-//   useEffect(() => {
-//     // Mobil qurilmani aniqlash
-//     const checkIfMobile = () => {
-//       setIsMobile(window.innerWidth <= 768);
-//     };
-
-//     checkIfMobile();
-//     window.addEventListener("resize", checkIfMobile);
-
-//     return () => {
-//       window.removeEventListener("resize", checkIfMobile);
-//     };
-//   }, []);
-
-//   useEffect(() => {
-//     const loadVanta = async () => {
-//       const VANTA = await import("vanta/dist/vanta.net.min");
-
-//       if (!vantaEffect) {
-//         const effect = VANTA.default({
-//           el: myRef.current,
-//           THREE: THREE,
-//           mouseControls: true,
-//           touchControls: true,
-//           gyroControls: false,
-//           minHeight: 200.0,
-//           minWidth: 200.0,
-//           scale: isMobile ? 0.5 : 1.0, // Mobil uchun masshtabni kamaytiramiz
-//           scaleMobile: 0.5,
-//           color: 0x30fa8,
-//           backgroundColor: 0x11071f,
-//           points: isMobile ? 12 : 20, // Mobil uchun nuqtalar sonini kamaytiramiz
-//           maxDistance: isMobile ? 12.0 : 18.0,
-//           spacing: isMobile ? 20.0 : 15.0, // Mobil uchun oraliqni oshiramiz
-//           showDots: !isMobile, // Mobilda nuqtalarni o'chirib qo'yamiz
-//           size: isMobile ? 0.3 : 0.5,
-//           speed: isMobile ? 0.5 : 0.8,
-//           lineWidth: isMobile ? 0.2 : 0.3,
-//         });
-
-//         setVantaEffect(effect);
-//       }
-//     };
-
-//     loadVanta();
-
-//     return () => {
-//       if (vantaEffect) vantaEffect.destroy();
-//     };
-//   }, [vantaEffect, isMobile]);
-
-//   const containerStyle = {
-//     width: "100%",
-//     height: isMobile ? "100vh" : "90vh", // Mobil uchun balandlikni kamaytiramiz
-//     position: "relative",
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "center",
-//     alignItems: "flex-start",
-//     padding: isMobile ? "0 5%" : "0 10%", // Mobil uchun paddingni kamaytiramiz
-//     overflow: "hidden", // Chiqib ketishdan saqlaymiz
-//   };
-
-//   return (
-//     <div ref={myRef} style={containerStyle}>
-//       <PortfolioHeader />
-//     </div>
-//   );
-// }
-
-// export default Showcase;
-
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import PortfolioHeader from "../design";
 
-function Showcase() {
+function Showcase({ til }) {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -105,13 +22,13 @@ function Showcase() {
 
   useEffect(() => {
     let effect = null;
-    
+
     const loadVanta = async () => {
       const VANTA = await import("vanta/dist/vanta.net.min");
-      
+
       if (myRef.current) {
         if (vantaEffect) vantaEffect.destroy();
-        
+
         effect = VANTA.default({
           el: myRef.current,
           THREE: THREE,
@@ -120,17 +37,17 @@ function Showcase() {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: isMobile ? 0.5 : 1.2,  // Desktopda masshtabni oshirdim
+          scale: isMobile ? 0.5 : 1.2, // Desktopda masshtabni oshirdim
           scaleMobile: 0.5,
           color: 0x30fa8,
           backgroundColor: 0x11071f,
-          points: isMobile ? 12 : 24,    // Desktopda ko'proq nuqtalar
-          maxDistance: isMobile ? 12.0 : 24.0,  // Desktopda kengroq
-          spacing: isMobile ? 20.0 : 25.0,  // Desktopda oraliqni oshirdim
+          points: isMobile ? 12 : 24, // Desktopda ko'proq nuqtalar
+          maxDistance: isMobile ? 12.0 : 24.0, // Desktopda kengroq
+          spacing: isMobile ? 20.0 : 25.0, // Desktopda oraliqni oshirdim
           showDots: !isMobile,
-          size: isMobile ? 0.3 : 0.6,   // Desktopda kattaroq
-          speed: isMobile ? 0.5 : 1.0,  // Desktopda tezroq
-          lineWidth: isMobile ? 0.2 : 0.4  // Desktopda qalinroq
+          size: isMobile ? 0.3 : 0.6, // Desktopda kattaroq
+          speed: isMobile ? 0.5 : 1.0, // Desktopda tezroq
+          lineWidth: isMobile ? 0.2 : 0.4, // Desktopda qalinroq
         });
 
         setVantaEffect(effect);
@@ -158,7 +75,7 @@ function Showcase() {
 
   return (
     <div ref={myRef} style={containerStyle}>
-      <PortfolioHeader />
+      <PortfolioHeader til={til} />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ setTil }) {
   const [language, setLanguage] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -31,6 +31,10 @@ function Navbar() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const getTil = (value) => {
+    setTil(value);
   };
 
   return (
@@ -60,7 +64,7 @@ function Navbar() {
               duration={800}
               offset={-80}
             >
-              <span>Men haqimda</span>
+              <span>{language ? "About Me" : "Men haqimda"}</span>
             </ScrollLink>
 
             <ScrollLink
@@ -70,7 +74,7 @@ function Navbar() {
               duration={800}
               offset={-80}
             >
-              <span>Ko'nikmalar</span>
+              <span>{language ? "Skills" : "Ko'nikmalar"}</span>
             </ScrollLink>
 
             <ScrollLink
@@ -80,7 +84,7 @@ function Navbar() {
               duration={800}
               offset={-80}
             >
-              <span>Loyihalar</span>
+              <span>{language ? "Projects" : "Loyihalar"}</span>
             </ScrollLink>
 
             {/* Contact linki qo'shildi */}
@@ -91,14 +95,17 @@ function Navbar() {
               duration={800}
               offset={-80}
             >
-              <span>Bog'lanish</span>
+              <span>{language ? "Contact" : "Bog'lanish"}</span>
             </ScrollLink>
           </nav>
 
           {/* Til almashtirish tugmalari */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setLanguage(true)}
+              onClick={() => {
+                setLanguage(true);
+                getTil("en");
+              }}
               className={`px-3 py-1 rounded-md text-sm md:text-base transition-all ${
                 language ? "text-white bg-[#561e8f]" : "text-gray-300"
               }`}
@@ -107,7 +114,10 @@ function Navbar() {
             </button>
             <span className="text-gray-400 hidden md:inline">|</span>
             <button
-              onClick={() => setLanguage(false)}
+              onClick={() => {
+                setLanguage(false);
+                getTil("uz");
+              }}
               className={`px-3 py-1 rounded-md text-sm md:text-base transition-all ${
                 !language ? "text-white bg-[#561e8f]" : "text-gray-300"
               }`}
@@ -128,7 +138,7 @@ function Navbar() {
             type="button"
           >
             <FaHome className="text-lg mb-1 text-purple-400" />
-            <span>Bosh</span>
+            <span>{language ? "Home" : "Bosh"}</span>
           </button>
 
           {/* About linki */}
@@ -140,7 +150,7 @@ function Navbar() {
             offset={-80}
           >
             <FaUser className="text-lg mb-1 text-purple-400" />
-            <span>Haqimda</span>
+            <span>{language ? "About" : "Haqimda"}</span>
           </ScrollLink>
 
           {/* Skills linki */}
@@ -152,7 +162,7 @@ function Navbar() {
             offset={-80}
           >
             <FaCode className="text-lg mb-1 text-purple-400" />
-            <span>Ko'nikma</span>
+            <span>{language ? "Skills" : "Ko'nikma"}</span>
           </ScrollLink>
 
           {/* Projects linki */}
@@ -164,7 +174,7 @@ function Navbar() {
             offset={-80}
           >
             <FaProjectDiagram className="text-lg mb-1 text-purple-400" />
-            <span>Loyiha</span>
+            <span>{language ? "Projects" : "Loyiha"}</span>
           </ScrollLink>
 
           {/* Contact linki */}
@@ -176,7 +186,7 @@ function Navbar() {
             offset={-80}
           >
             <FaEnvelope className="text-lg mb-1 text-purple-400" />
-            <span>Aloqa</span>
+            <span>{language ? "Contact" : "Bog'lanish"}</span>
           </ScrollLink>
         </div>
       </footer>

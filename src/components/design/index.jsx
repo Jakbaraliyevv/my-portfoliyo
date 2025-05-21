@@ -4,7 +4,7 @@ import { GithubOutlined } from "@ant-design/icons";
 import { BsTelegram } from "react-icons/bs";
 import myImage from "../../assets/my-img.jpg";
 
-export default function PortfolioHeader() {
+export default function PortfolioHeader({ til }) {
   const [isVisible, setIsVisible] = useState(false);
   const [typing, setTyping] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -93,7 +93,9 @@ export default function PortfolioHeader() {
               windowWidth <= 320 ? "text-xs" : ""
             }`}
           >
-            <span className="font-medium">I am </span>
+            <span className="font-medium">
+              {til === "en" ? "I am" : "Bu men"}
+            </span>
             <span className="text-purple-600 ml-1 font-bold">Aziz</span>
             <div className="absolute -bottom-2 lg:-bottom-3 left-1/2 transform -translate-x-1/2 w-3 sm:w-4 lg:w-5 h-3 sm:h-4 lg:h-5 bg-white rotate-45"></div>
           </div>

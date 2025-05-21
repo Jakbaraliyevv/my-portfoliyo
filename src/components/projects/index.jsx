@@ -6,8 +6,8 @@ import quiz from "../../assets/quiz.png";
 import onerRu from "../../assets/oner_ru.png";
 import library from "../../assets/library.png";
 import myRobo from "../../assets/myRobo.png";
-const FeaturedProjects = () => {
-  const [projects] = useState([
+const FeaturedProjects = ({ til }) => {
+  const projects = [
     {
       id: 6,
       title: "MyRobo",
@@ -76,7 +76,76 @@ const FeaturedProjects = () => {
       imageUrl: library,
       featured: true,
     },
-  ]);
+  ];
+
+  const projectsEn = [
+    {
+      id: 6,
+      title: "MyRobo",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/MyRobo",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
+      imageUrl: myRobo,
+      featured: true,
+    },
+    {
+      id: 1,
+      title: "Robotics",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://test-project-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/test_project",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "JavaScript"],
+      imageUrl: robotks,
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Raqamli Avlod Register",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://register-page-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/register_page",
+      tech: ["React + Vite", "Tailwind CSS", "Antd", "JavaScript"],
+      imageUrl: regster,
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "Quiz",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://my-first-project-quiz-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/MyFirstProject__Quiz",
+      tech: ["React + Vite", "Tailwind CSS", "Antd", "JavaScript"],
+      imageUrl: quiz,
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "Oner.Ru",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/oner__Ru",
+      tech: ["React + Vite", "Sass", "Antd", "JavaScript"],
+      imageUrl: onerRu,
+      featured: true,
+    },
+    {
+      id: 5,
+      title: "Library",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays.",
+      link: "https://oner-ru-git-master-azizbros-projects.vercel.app",
+      github: "https://github.com/Jakbaraliyevv/oner__Ru",
+      tech: ["React + Vite", "Sass", "Antd", "JavaScript"],
+      imageUrl: library,
+      featured: true,
+    },
+  ];
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a0b2e]">
@@ -84,7 +153,9 @@ const FeaturedProjects = () => {
         <div className="relative mb-16 z-10">
           <h1 className="text-5xl font-bold text-center text-[#FFF]">
             <span className="inline-block relative">
-              <span className="relative z-10">Loyihalar</span>
+              <span className="relative z-10">
+                {til === "en" ? "Projects" : "Loyihalar"}
+              </span>
               <span
                 className="absolute -inset-1 blur-lg bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-600 opacity-70"
                 style={{ animation: "pulse 3s infinite" }}
@@ -95,7 +166,7 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="space-y-20">
-          {projects.map((project, index) => (
+          {(til === "en" ? projectsEn : projects).map((project, index) => (
             <div
               key={project.id}
               className={`flex flex-col ${
@@ -124,7 +195,9 @@ const FeaturedProjects = () => {
                 <div className={`${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
                   {project.featured && (
                     <span className="inline-block text-xs font-mono text-blue-400 mb-2">
-                      Featured Project
+                      {til === "en"
+                        ? "Featured Project"
+                        : "Tanlangan loyihalar"}
                     </span>
                   )}
 
@@ -172,7 +245,9 @@ const FeaturedProjects = () => {
                       className="text-gray-400 hover:text-white transition-colors flex items-center"
                       aria-label="Live demo"
                     >
-                      <span>View Project</span>
+                      <span>
+                        {til === "en" ? "View Project" : "Batafsil ko‘rish"}
+                      </span>
                       <ArrowRightOutlined className="text-xs ml-1" />
                     </a>
                   </div>
