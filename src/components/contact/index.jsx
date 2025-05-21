@@ -1,7 +1,6 @@
 import {
   GithubOutlined,
   LinkedinOutlined,
-  //   TelegramOutlined,
   InstagramOutlined,
 } from "@ant-design/icons";
 import { BsTelegram } from "react-icons/bs";
@@ -135,7 +134,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/50 p-8 rounded-xl flex flex-col">
+          <div className="bg-gray-800/50 p-8 rounded-xl flex flex-col mb-5">
             <h3 className="text-xl font-semibold text-white mb-4">My Resume</h3>
             <p className="text-gray-300 mb-6 flex-grow">
               Download my resume to learn more about my professional experience,
@@ -153,8 +152,8 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center max-[768px]:hidden">
+          <p className="text-gray-400 ">
             © {new Date().getFullYear()} All Rights Reserved
           </p>
         </div>

@@ -105,7 +105,7 @@ export default function PortfolioHeader() {
     text-3xl      
     sm:text-4xl   
     md:text-5xl   
-    lg:text-[77px] 
+    lg:text-[64px] 
     font-bold text-white 
     mb-4           
     sm:mb-5        
