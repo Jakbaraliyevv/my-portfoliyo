@@ -7,7 +7,7 @@ function AboutComponents({ til }) {
       description:
         "React va JavaScript asosida ishlab chiqilgan IT Markazi uchun website",
       tags: ["React Vite", "Tailwind css", "Antd", "JavaScript"],
-      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      link: "https://myrobo.uz/",
     },
     {
       title: "Register",
@@ -29,7 +29,7 @@ function AboutComponents({ til }) {
       description:
         "A website developed for an IT Center based on React and JavaScript.",
       tags: ["React Vite", "Tailwind CSS", "Antd", "JavaScript"],
-      link: "https://myrobo-git-master-azizbros-projects.vercel.app",
+      link: "https://myrobo.uz/",
     },
     {
       title: "Register",
