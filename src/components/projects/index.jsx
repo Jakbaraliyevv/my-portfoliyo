@@ -6,8 +6,20 @@ import quiz from "../../assets/quiz.png";
 import onerRu from "../../assets/oner_ru.png";
 import library from "../../assets/library.png";
 import myRobo from "../../assets/myRobo.png";
+import magic from "../../assets/macig.png";
 const FeaturedProjects = ({ til }) => {
   const projects = [
+     {
+      id: 17,
+      title: "Magic Cinema",
+      description:
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy  veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega. ",
+      link: "https://resualt-front-wexi-git-master-azizbros-projects.vercel.app/",
+      github: "https://github.com/Jakbaraliyevv/Resualt-front",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "TypeScript"],
+      imageUrl: magic,
+      featured: true,
+    },
     {
       id: 6,
       title: "MyRobo",
