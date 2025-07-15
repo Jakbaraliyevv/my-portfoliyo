@@ -2,25 +2,27 @@ import { Link } from "react-scroll";
 
 function AboutComponents({ til }) {
   const featuredProjects = [
+      {
+      title: "Magic Cinema",
+      description:
+        "Veb-dasturchi sifatida loyihalarim va ko'nikmalarimni namoyish etuvchi zamonaviy veb-sayti. Sayt moslashuvchan dizayn va interaktiv loyiha ko‘rinishlariga ega.",
+      tags: [
+        "React Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Antd",
+        "TypeScript",
+      ],
+      link: "https://resualt-front-wexi-git-master-azizbros-projects.vercel.app/",
+    },
     {
       title: "MyRobo",
       description:
         "React va JavaScript asosida ishlab chiqilgan IT Markazi uchun website",
       tags: ["React Vite", "Tailwind css", "Antd", "JavaScript"],
       link: "https://myrobo.uz/",
-    },
-    {
-      title: "Register",
-      description: "Raqamli avlod uchun register website",
-      tags: [
-        "React Vite",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Antd",
-        "JavaScript",
-      ],
-      link: "https://register-page-git-master-azizbros-projects.vercel.app/",
-    },
+    }
+    
   ];
 
   const featuredProjectsEN = [
