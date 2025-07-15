@@ -24,6 +24,19 @@ function AboutComponents({ til }) {
   ];
 
   const featuredProjectsEN = [
+     {
+      title: "Magic Cinema",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays..",
+      tags: [
+        "React Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Antd",
+        "TypeScript",
+      ],
+      link: "https://resualt-front-wexi-git-master-azizbros-projects.vercel.app/",
+    },
     {
       title: "MyRobo",
       description:
@@ -31,19 +44,7 @@ function AboutComponents({ til }) {
       tags: ["React Vite", "Tailwind CSS", "Antd", "JavaScript"],
       link: "https://myrobo.uz/",
     },
-    {
-      title: "Register",
-      description:
-        "A registration website designed for the digital generation.",
-      tags: [
-        "React Vite",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Antd",
-        "JavaScript",
-      ],
-      link: "https://register-page-git-master-azizbros-projects.vercel.app/",
-    },
+   
   ];
 
   return (
