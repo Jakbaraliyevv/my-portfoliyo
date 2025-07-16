@@ -92,6 +92,17 @@ const FeaturedProjects = ({ til }) => {
 
   const projectsEn = [
     {
+      id: 17,
+      title: "Magic Cinema",
+      description:
+        "A modern website showcasing my projects and skills as a web developer. The site features responsive design and interactive project displays. ",
+      link: "https://resualt-front-wexi-git-master-azizbros-projects.vercel.app/",
+      github: "https://github.com/Jakbaraliyevv/Resualt-front",
+      tech: ["React + Vite", "Tailwind CSS", "Ant Design", "TypeScript"],
+      imageUrl: magic,
+      featured: true,
+    },
+    {
       id: 6,
       title: "MyRobo",
       description:
